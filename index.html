@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body class="body-home">
+        <div class="header">
+            <img src="images/ITv-Logo.png"/>
+        </div>
+
+        <h4>Hello, Thank you for taking the time to participate in our survey. Your feedback is crucial to us at IT Varsity as we continuously strive to improve our courses and services.
+        <br>
+        This survey should take approximately 5-10 minutes to complete. Please be assured that all responses will be kept confidential and will be used to enhance our offerings.
+        <br>
+        Your insights are valuable and will contribute to shaping the future of IT education at IT Varsity. Let's get started!</h4>
+        <br>
+        <div class="form-container">
+            <form>
+                <label for="username">Username</label><input type="text" id="usernameInput"/><br/>
+                <label for="password">Password</label><input type="password" id="passwordInput"/>
+                <p id="message"></p>
+                <br/><br/>
+            </form>
+         </div>
+        <br>
+        <a class="button2" href="#" onclick="verifyUser()">Next Page</a>
+
+        <script>
+            function verifyUser(){
+                var username = document.getElementById("usernameInput").value;
+                var password = document.getElementById("passwordInput").value;
+
+                checkUserCrids(username, password);
+            }
+
+            function checkUserCrids(username, password) {
+                var systemUsername = "AzraIsLame";
+                var systemPassword = "NabiaNeedHelp";
+
+                if(username == systemUsername && password == systemPassword) {
+                    document.getElementById("message").innerHTML = "Correct";
+                } else {
+                    document.getElementById("message").innerHTML = "Get help";
+                }
+            }
+
+        </script>
+
+    </body>
+</html>
